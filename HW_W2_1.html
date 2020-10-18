@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 연습하고 가기!</title>
+
+    <!-- JQuery를 import 합니다 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        div.question-box {
+            margin: 10px 0 20px 0;
+        }
+    </style>
+
+    <script>
+        function showName() {
+
+            let New_name = $('#input-name').val();
+
+
+            let tempHtml=`<li>${New_name}</li>`;
+            $('#names').append(tempHtml);
+
+
+        }
+
+        function removeNames() {
+            $('#names').empty();
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>jQuery + Javascript의 조합을 연습하자!</h1>
+
+    <div class="question-box">
+        <h2>HTML 붙이기/지우기 연습</h2>
+        <h5>1. 이름을 입력하면 아래 나오게 하기</h5>
+        <h5>2. 다지우기 버튼을 만들기</h5>
+        <input id="input-name" type="text" placeholder="여기에 이름을 입력" />
+        <button onclick="showName()">이름 붙이기</button>
+        <button onclick="removeNames()">다지우기</button>
+        <ul id="names">
+            <li>김스파</li>
+            <li>박르탄</li>
+        </ul>
+    </div>
+</body>
+
+</html>
